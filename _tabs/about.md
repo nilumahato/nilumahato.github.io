@@ -11,7 +11,7 @@ I am a skilled Flutter developer with a passion for creating functional and visu
 ## Contact Information
 
 - **Phone:** 9863742165
-- **Email:** aaratimahato00@gmail.com
+- **Email:** aaratimahato006@gmail.com
 - **GitHub:** [https://github.com/nilumahato](https://github.com/nilumahato)
 - **Website:** aaratimahato.com.np
 - **Location:** Kathmandu, Nepal
@@ -20,8 +20,9 @@ I am a skilled Flutter developer with a passion for creating functional and visu
 
 ### Programming Languages & Technologies
 - **Flutter Developer** - Mobile app development
-- **Languages:** HTML, CSS, JavaScript, Linux, Python
+- **Languages:** HTML, CSS, Python
 - **Tools:** Postman, Git, GitHub
+- **Operating System:** Linux
 - **Version Control:** Git, Flutter, Dart, C, C++
 
 ## Education
@@ -34,20 +35,23 @@ I am a skilled Flutter developer with a passion for creating functional and visu
 ## Professional Experience
 
 ### Flutter Developer Intern
-**SimplifyMe (Live in Play Store)** - *Developed in 2023 | Published in 2025*
+**Simply Me (Live in Play Store)** - *Developed in 2023 | Published in 2025*
 
-During my time as a Flutter developer intern, I actively participated in coding and software development, which helped me enhance my skills and collaborate with like-minded individuals. One of the key projects of this experience was developing SimplifyMe. This has been a constant motivation throughout my studies.
+During my time as a Flutter developer intern, I actively participated in coding and software development, which helped me enhance my skills and collaborate with like-minded individuals. One of the key projects of this experience was developing Simply Me. This has been a constant motivation throughout my studies.
 
-An **MBTI-based personality test app** created during my early learning phase:
+An **MBTI-based personality test app** created after my first project Marga Darshan:
 - Provides a summary of personality traits and strengths
-- **Play Store:** [SimplifyMe](https://play.google.com/store/apps/details?id=com.aarati.mbti_test)
+- **Play Store:** [Simply Me](https://play.google.com/store/apps/details?id=com.aarati.mbti_test)
 
 ## Projects
 
-### Marga Darshan (Software Engineering Project)
+### Marga Darshan (My First Flutter App)
 **May 2023 - Sept 2023**
 
-Marga Darshan is a user-friendly mobile application designed for smart public transportation route planning in Flutter.
+My very first Flutter application, born out of personal necessity when I was new to Pokhara and struggling with public transportation. Not knowing where buses go, their fares, or stops, I decided to create a solution.
+- Smart public transportation route planning for Pokhara
+- Bus route information, fare calculator, and stop locations
+- Solved real problems I faced as a newcomer to the city
 - Developed Flutter-based personal commuting challenges to make city travel easier and more accessible
 
 ### SafeConnect (Minor Project)
