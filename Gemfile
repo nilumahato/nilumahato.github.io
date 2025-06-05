@@ -4,13 +4,7 @@ source "https://rubygems.org"
 
 # Use GitHub Pages gem for compatibility
 gem "github-pages", group: :jekyll_plugins
-
-# Required plugins for Chirpy theme
-gem "jekyll-paginate"
-gem "jekyll-redirect-from"
-gem "jekyll-seo-tag"
-gem "jekyll-archives"
-gem "jekyll-sitemap"
+gem "minima"
 
 group :test do
   gem "html-proofer", "~> 5.0"
