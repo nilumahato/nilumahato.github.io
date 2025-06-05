@@ -2,10 +2,15 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 7.0", ">= 7.0.1"
-
-# GitHub Pages compatibility
+# Use GitHub Pages gem for compatibility
 gem "github-pages", group: :jekyll_plugins
+
+# Required plugins for Chirpy theme
+gem "jekyll-paginate"
+gem "jekyll-redirect-from"
+gem "jekyll-seo-tag"
+gem "jekyll-archives"
+gem "jekyll-sitemap"
 
 group :test do
   gem "html-proofer", "~> 5.0"
