@@ -33,30 +33,22 @@ header_pages:
 paginate: 10
 paginate_path: "/page:num/"
 
-# Add cache-busting for CSS/JS files
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
-
-# Exclude from processing
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 
-# Cache control for development
-# This helps prevent browser caching issues
+# Sass settings
 sass:
   style: compressed
 
-# Add cache-busting for CSS/JS files
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
