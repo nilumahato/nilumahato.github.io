@@ -16,10 +16,10 @@ timezone:
 
 title: Aarati Mahato # the main title
 
-tagline: My Personal Blog # it will display as the sub-title
+tagline: Flutter Developer # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Blog, Aarati, Github
+  Skilled Flutter developer with a passion for creating functional and visually appealing mobile applications. Portfolio of projects showcasing expertise in Flutter, Python, HTML, and CSS.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -35,10 +35,9 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Aarati Mahato
-  email: example@domain.com # change to your email address
+  email: aaratimahato00@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
     - https://github.com/nilumahato # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
