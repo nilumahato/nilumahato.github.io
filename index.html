@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aarati Mahato – Flutter Developer</title>
+  <meta name="description" content="Portfolio of Aarati Mahato, Flutter developer from Kathmandu, Nepal. Published apps on Google Play and the App Store.">
+  <meta property="og:title" content="Aarati Mahato – Flutter Developer">
+  <meta property="og:description" content="Flutter developer building cross-platform mobile apps.">
+  <meta property="og:url" content="https://aaratimahato.com.np">
+  <link rel="canonical" href="https://aaratimahato.com.np">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo">AM<span>.</span></a>
+    <nav id="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" aria-label="Toggle dark mode">🌓</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1 id="name"></h1>
+      <h2 class="typed"><span id="typed"></span><span class="caret">|</span></h2>
+      <p id="intro" class="lead"></p>
+      <div class="cta">
+        <a class="btn" href="#projects">View my apps</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2 class="title">Projects</h2>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <h2 class="title">Experience</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2 class="title">Skills</h2>
+      <div class="skills" id="skillsList"></div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h2 class="title">Education & Competitions</h2>
+      <div class="two">
+        <div id="edu"></div>
+        <div id="comp"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h2 class="title">Contact</h2>
+      <p class="lead" id="contactInfo"></p>
+      <form id="form">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Your email" required>
+        <textarea name="msg" rows="5" placeholder="Message" required></textarea>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Aarati Mahato · aaratimahato.com.np</footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
