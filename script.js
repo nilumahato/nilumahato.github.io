@@ -74,11 +74,29 @@ $("comp").innerHTML = "<h3>Competitions</h3>" + DATA.competitions.map((c) => `<d
 // Contact
 $("contactInfo").innerHTML =
   `Open to opportunities. Reach me at <a href="mailto:${DATA.email}">${DATA.email}</a> or find me on <a href="${DATA.github}" target="_blank" rel="noopener">GitHub</a>. Based in ${esc(DATA.location)}.`;
-$("form").addEventListener("submit", (e) => {
+$("form").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const f = new FormData(e.target);
-  const body = `${f.get("msg")}\n\n— ${f.get("name")} (${f.get("email")})`;
-  location.href = `mailto:${DATA.email}?subject=${encodeURIComponent("Portfolio message from " + f.get("name"))}&body=${encodeURIComponent(body)}`;
+  const form = e.target, btn = form.querySelector("button"), st = $("status");
+  const f = new FormData(form);
+  btn.disabled = true; btn.textContent = "Sending…"; st.className = "status"; st.textContent = "";
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${DATA.email}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        name: f.get("name"), email: f.get("email"), message: f.get("msg"),
+        _honey: f.get("_honey"), _subject: "Portfolio message from " + f.get("name"), _replyto: f.get("email"),
+      }),
+    });
+    const out = await res.json();
+    if (!res.ok || out.success === "false" || out.success === false) throw new Error(out.message || "failed");
+    st.className = "status ok"; st.textContent = "Thanks! Your message was sent.";
+    form.reset();
+  } catch (_) {
+    st.className = "status err";
+    st.innerHTML = `Couldn't send. Please email me at <a href="mailto:${DATA.email}">${DATA.email}</a>.`;
+  }
+  btn.disabled = false; btn.textContent = "Send message";
 });
 
 // Theme (remembers choice, defaults to system preference)

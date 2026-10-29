@@ -62,7 +62,13 @@ h1 { font-size: clamp(2.4rem, 7vw, 4.2rem); line-height: 1.1; }
 }
 .btn:hover { transform: translateY(-2px); }
 :root[data-theme="dark"] .btn { color: #0e1116; }
-.btn.ghost { background: transparent; color: var(--accent); }
+.btn.ghost, :root[data-theme="dark"] .btn.ghost { background: transparent; color: var(--accent); }
+.btn.ghost:hover { background: var(--accent-soft); }
+.btn:disabled { opacity: .6; cursor: wait; transform: none; }
+.status { font-size: .95rem; min-height: 1.4em; }
+.status.ok { color: #2e9e5b; }
+.status.err { color: #d64545; }
+.hp { position: absolute; left: -9999px; }
 
 .stats { display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
 .stat b { display: block; font-size: 2rem; color: var(--accent); }
