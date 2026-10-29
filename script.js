@@ -78,23 +78,27 @@ $("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target, btn = form.querySelector("button"), st = $("status");
   const f = new FormData(form);
+  const name = f.get("name"), email = f.get("email"), msg = f.get("msg");
   btn.disabled = true; btn.textContent = "Sending…"; st.className = "status"; st.textContent = "";
   try {
-    const res = await fetch(`https://formsubmit.co/ajax/${DATA.email}`, {
+    // Prefer Web3Forms when a key is set in data.js, otherwise use FormSubmit.
+    const key = DATA.web3formsKey;
+    const res = await fetch(key ? "https://api.web3forms.com/submit" : `https://formsubmit.co/ajax/${DATA.email}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        name: f.get("name"), email: f.get("email"), message: f.get("msg"),
-        _honey: f.get("_honey"), _subject: "Portfolio message from " + f.get("name"), _replyto: f.get("email"),
-      }),
+      body: JSON.stringify(key
+        ? { access_key: key, name, email, message: msg, subject: "Portfolio message from " + name, botcheck: f.get("_honey") }
+        : { name, email, message: msg, _honey: f.get("_honey"), _subject: "Portfolio message from " + name, _replyto: email }),
     });
     const out = await res.json();
     if (!res.ok || out.success === "false" || out.success === false) throw new Error(out.message || "failed");
     st.className = "status ok"; st.textContent = "Thanks! Your message was sent.";
     form.reset();
   } catch (_) {
+    // Fallback: open the visitor's email app with the message prefilled.
     st.className = "status err";
-    st.innerHTML = `Couldn't send. Please email me at <a href="mailto:${DATA.email}">${DATA.email}</a>.`;
+    st.textContent = "Couldn't send directly, opening your email app instead…";
+    location.href = `mailto:${DATA.email}?subject=${encodeURIComponent("Portfolio message from " + name)}&body=${encodeURIComponent(msg + "\n\n— " + name + " (" + email + ")")}`;
   }
   btn.disabled = false; btn.textContent = "Send message";
 });
