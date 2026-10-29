@@ -6,7 +6,7 @@ const DATA = {
     "I build cross-platform mobile apps with Flutter and Firebase, and I've shipped six of them to both the Google Play Store and the Apple App Store.",
   email: "aaratimahato006@gmail.com",
   // Free key from https://web3forms.com (enter your email, they send the key). Makes the contact form reliable.
-  web3formsKey: "",
+  web3formsKey: "30c08138-24fa-407d-9f70-0a1dac83900f",
   github: "https://github.com/nilumahato",
   phone: "9863742165",
   location: "Kathmandu, Nepal",
